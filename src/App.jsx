@@ -23,7 +23,7 @@ const App = () => {
                             </Col>
                         </Row>
 
-                        <Row xs="4" className='m-5'>
+                        <Row xs="1" md="4" className='m-5'>
                             <Col className='col-lg-4 col-md-6 d-flex align-items-center justify-content-center mt-2 mb-2'>
                                 <Card></Card>
                             </Col>
