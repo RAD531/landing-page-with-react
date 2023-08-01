@@ -1,48 +1,53 @@
 import React from 'react';
-import { Saludo } from './Saludo'; // export 
-import Heading from './Heading'; // export by default
-import Image from './Image';
-import List from './List';
-import ItemList from './ItemList';
-
+import { Container, Row, Col } from "reactstrap";
+import Navigation from './Navigation.jsx';
+import Jumpotron from './Jumpotron.jsx';
+import Card from './Card.jsx';
+import Footer from './Footer.jsx';
 
 const App = () => {
     return (
         <>
-            <Saludo />
-            <Heading />
-            <Image src={"https://picsum.photos/id/666/800/800"} alt="Bosque" width={400} height={400} />
-            <img src="" alt="" width="" height="" />
+            <main className="">
+                <Container fluid="true">
+                    <Row>
+                        <Col>
+                            <Navigation></Navigation>
+                        </Col>
+                    </Row>
 
-            <List>
-                <ItemList>HTML</ItemList>
-                <ItemList>CSS</ItemList>
-                <ItemList>Javascript</ItemList>
-            </List>
+                    <Container>
+                        <Row className='m-5'>
+                            <Col>
+                                <Jumpotron></Jumpotron>
+                            </Col>
+                        </Row>
 
-            {/* <section id="home">
-                <Layout>
-                    <Header />
-                    <Main>
-                        <h1>Home</h1>
-                    </Main>
-                    <Footer />
-                </Layout>
-            </section>
+                        <Row xs="4" className='m-5'>
+                            <Col className='col-lg-4 col-md-6 d-flex align-items-center justify-content-center mt-2 mb-2'>
+                                <Card></Card>
+                            </Col>
+                            <Col className='col-lg-4 col-md-6 d-flex align-items-center justify-content-center mt-2 mb-2'>
+                                <Card></Card>
+                            </Col>
+                            <Col className='col-lg-4 col-md-6 d-flex align-items-center justify-content-center mt-2 mb-2'>
+                                <Card></Card>
+                            </Col>
+                            <Col className='col-lg-4 col-md-6 d-flex align-items-center justify-content-center mt-2 mb-2'>
+                                <Card></Card>
+                            </Col>
+                        </Row>
+                    </Container>
 
-
-            <section id="about">
-                <Layout>
-                    <Header />
-                    <Main>
-                        <h1>About</h1>
-                    </Main>
-                    <Footer />
-                </Layout>
-            </section> */}
-
+                    <Row>
+                        <Col>
+                            <Footer></Footer>
+                        </Col>
+                    </Row>
+                </Container>
+            </main>
         </>
-    )
-}
+    );
+};
 
 export default App;
